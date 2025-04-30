@@ -9,7 +9,6 @@ const SignUpForm = () => {
   const [age, setAge] = useState("");
   const [genderPreference, setGenderPreference] = useState("");
 
-
   const { signup, loading } = useAuthStore();
 
   return (
@@ -17,7 +16,7 @@ const SignUpForm = () => {
       className="space-y-6"
       onSubmit={(e) => {
         e.preventDefault();
-        signup({name,email,password,age,gender,genderPreference});
+        signup({ name, email, password, age, gender, genderPreference });
       }}
     >
       {/*NAME*/}
@@ -123,7 +122,7 @@ const SignUpForm = () => {
               className="h-4 w-4 text-pink-600 focus:ring-pink-500 border-gray-300 rounded"
             />
             <label htmlFor="male" className="ml-2 block text-sm text-gray-900">
-              FeMale
+              Male
             </label>
           </div>
 
@@ -137,7 +136,7 @@ const SignUpForm = () => {
               className="h-4 w-4 text-pink-600 focus:ring-pink-500 border-gray-300 rounded"
             />
             <label htmlFor="male" className="ml-2 block text-sm text-gray-900">
-              Male
+              FeMale
             </label>
           </div>
         </div>
